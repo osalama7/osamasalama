@@ -1,4 +1,4 @@
-const contentfulConfig = require('./.contentful')
+const contentfulConfig = require('./.contentful');
 
 module.exports = {
   pathPrefix: '/gatsby-contentful-starter',

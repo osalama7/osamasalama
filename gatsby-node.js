@@ -22,11 +22,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
+          console.log(result.errors);
+          reject(result.errors);
         }
 
-        const posts = result.data.allContentfulBlogPost.edges
+        const posts = result.data.allContentfulBlogPost.edges;
         posts.forEach((post, index) => {
           createPage({
             path: `/blog/${post.node.slug}/`,

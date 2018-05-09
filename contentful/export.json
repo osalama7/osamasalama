@@ -758,12 +758,6 @@
                 }
             },
             "fields": {
-                "title": {
-                    "en-US": "Static sites are great"
-                },
-                "slug": {
-                    "en-US": "static-sites-are-great"
-                },
                 "heroImage": {
                     "en-US": {
                         "sys": {
