@@ -1,14 +1,13 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
-import styles from './blog.module.css'
-import ArticlePreview from '../components/article-preview'
+import React from 'react';
+import Link from 'gatsby-link';
+import get from 'lodash/get';
+import Helmet from 'react-helmet';
+import styles from './blog.module.css';
 
 class BlogIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
+    const posts = get(this, 'props.data.allContentfulBlogPost.edges');
 
     return (
       <div style={{ background: '#fff' }}>
@@ -20,7 +19,6 @@ class BlogIndex extends React.Component {
             {posts.map(({ node }) => {
               return (
                 <li key={node.slug}>
-                  <ArticlePreview article={node} />
                 </li>
               )
             })}
@@ -31,7 +29,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
@@ -40,6 +38,7 @@ export const pageQuery = graphql`
         node {
           title
           slug
+
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
@@ -56,4 +55,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

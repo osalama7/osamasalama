@@ -23,6 +23,7 @@
     "eslint-plugin-react": "^7.5.1",
     "gatsby": "^1.9.202",
     "gh-pages": "^1.1.0",
+    "material-ui": "1.0.0-beta.47",
     "prettier": "^1.10.2"
   },
   "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",

@@ -4,40 +4,56 @@ import base from './base.css';
 import Container from '../components/container';
 import Navigation from '../components/navigation';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import AppBar from 'material-ui/AppBar';
+import CssBaseline from 'material-ui/CssBaseline';
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 // import injectTapEventPlugin from 'react-tap-event-plugin';
 // injectTapEventPlugin();
 // blueGrey900
+import { createMuiTheme } from 'material-ui/styles';
+
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            light: '#89b5c6',
+            main: '#005958',
+            dark: '#002884',
+            contrastText: '#fff',
+        },
+        secondary: {
+            light: '#ff7961',
+            main: '#89b5c6',
+            dark: '#ba000d',
+            contrastText: '#000',
+        },
+    },
+});
 
 class Template extends React.Component {
   render() {
 
-    const { location, children } = this.props
-    let header
-
-    let rootPath = `/`
+    const { location, children } = this.props;
+    let rootPath = `/`;
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
     return (
-        <MuiThemeProvider  muiTheme={getMuiTheme(darkBaseTheme)}>
-          <Container>
-              <AppBar
-                  title="Title"
-                  iconClassNameRight="muidocs-icon-navigation-expand-more"
-              />
+      <MuiThemeProvider theme={theme}>
+        <Container>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+            <AppBar
+                title="Title"
+            />
             <Navigation />
-
             {children()}
-          </Container>
-        </MuiThemeProvider>
-    )
+        </Container>
+      </MuiThemeProvider>
+
+    );
   }
 }
 
-export default Template
+export default Template;
