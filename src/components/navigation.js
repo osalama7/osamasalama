@@ -1,40 +1,30 @@
-// import React from 'react';
-// import Link from 'gatsby-link';
-//
-// export default () => (
-//   <nav role="navigation">
-//
-//     <ul className={styles.navigation}>
-//       <li className={styles.navigationItem}>
-//         <Link to="/">Home</Link>
-//       </li>
-//       <li className={styles.navigationItem}>
-//         <Link to="/blog/">Blog</Link>
-//       </li>
-//     </ul>
-//   </nav>
-// )
 import React from 'react';
-import Avatar from 'material-ui/Avatar';
-import IconButton from 'material-ui/IconButton';
-
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import classNames from 'classnames';
+import IconButton from 'material-ui/IconButton';
+import Avatar from '@material-ui/core/Avatar';
+
 const styles = {
     root: {
-        flexGrow: 2,
+        flexGrow: 5,
+				alignItems: 'stretch',
+				padding: '0px',
+				margin: '0px'
     },
     flex: {
         flex: 1,
+				flow: 'row'
     },
     menuButton: {
         marginLeft: -12,
         marginRight: 20,
     },
+		avatar: {
+			margin: 10,
+		},
     bigAvatar: {
         width: 60,
         height: 60,
@@ -49,24 +39,29 @@ function ProfileAppBar(props) {
     const { classes } = props;
     return (
         <div className={classes.root}>
-            <AppBar position="sticky" color="primary">
-                <Toolbar>
-                    <Typography variant="title" color="secondary">
-                    Osama Salama
-                    </Typography>'
-                    <div>
-                        <IconButton
-                            aria-owns={open ? 'menu-appbar' : null}
-                            aria-haspopup="true"
-                            onClick={this.handleMenu}
-                            color="inherit"
-                        >
-
-                        </IconButton>
-                    </div>
-                    <Avatar alt="Remy Sharp" src="/static/profile_icon.jpg" className={classes.bigAvatar} />
-                </Toolbar>
-            </AppBar>
+					<AppBar position="static">
+						<Toolbar>
+							<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+							</IconButton>
+							<Typography variant="title" color="inherit" className={classes.flex}>
+								Osama Salama
+							</Typography>
+								<div>
+									<IconButton
+											aria-owns={open ? 'menu-appbar' : null}
+											aria-haspopup="true"
+											onClick={this.handleMenu}
+											color="inherit"
+									>
+										<Avatar
+												alt="Software Engineer"
+												src="https://png.icons8.com/ios/50/000000/source-code-filled.png"
+												className={classes.avatar}
+										/>
+									</IconButton>
+								</div>
+						</Toolbar>
+					</AppBar>
         </div>
     );
 }

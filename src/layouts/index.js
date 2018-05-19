@@ -1,8 +1,9 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import base from './base.css';
 import Container from '../components/container';
 import Navigation from '../components/navigation';
+import BottomNav from '../components/bottom';
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import CssBaseline from 'material-ui/CssBaseline';
@@ -12,13 +13,15 @@ import CssBaseline from 'material-ui/CssBaseline';
 // injectTapEventPlugin();
 // blueGrey900
 import { createMuiTheme } from 'material-ui/styles';
-
 const theme = createMuiTheme({
     palette: {
+				type: 'dark',
+				background: '#005958',
         primary: {
             light: '#89b5c6',
             main: '#005958',
             dark: '#002884',
+						text: '#89b5c6',
             contrastText: '#fff',
         },
         secondary: {
@@ -29,6 +32,7 @@ const theme = createMuiTheme({
         },
     },
 });
+
 
 class Template extends React.Component {
   render() {
@@ -41,7 +45,8 @@ class Template extends React.Component {
 
     return (
       <MuiThemeProvider theme={theme}>
-        <Container>
+
+        <Container className="index-container">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
             <AppBar
@@ -49,6 +54,7 @@ class Template extends React.Component {
             />
             <Navigation />
             {children()}
+            <BottomNav />
         </Container>
       </MuiThemeProvider>
 
