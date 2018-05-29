@@ -2,7 +2,6 @@ import React from 'react';
 import base from './base.css';
 import Container from '../components/container';
 import Navigation from '../components/navigation';
-import BottomNav from '../components/bottom';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
@@ -54,7 +53,6 @@ class Template extends React.Component {
             />
             <Navigation />
             {children()}
-            <BottomNav />
         </Container>
       </MuiThemeProvider>
 

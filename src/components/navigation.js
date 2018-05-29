@@ -6,6 +6,7 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 import Avatar from '@material-ui/core/Avatar';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 
 const styles = {
     root: {
@@ -23,7 +24,7 @@ const styles = {
         marginRight: 20,
     },
 		avatar: {
-			margin: 10,
+			padding: '10px'
 		},
     bigAvatar: {
         width: 60,
@@ -41,23 +42,26 @@ function ProfileAppBar(props) {
         <div className={classes.root}>
 					<AppBar position="static">
 						<Toolbar>
-							<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+							<IconButton className={classes.menuButton}
+													color="inherit"
+													aria-label="Menu"
+													href="mailto:osama.salama@tutanota.de"
+							>
+								<Avatar
+								alt="Software Engineer"
+								src="https://png.icons8.com/ios/50/ffffff/source-code-filled.png"
+								className={classes.avatar}
+								/>
 							</IconButton>
 							<Typography variant="title" color="inherit" className={classes.flex}>
-								Osama Salama
 							</Typography>
 								<div>
 									<IconButton
 											aria-owns={open ? 'menu-appbar' : null}
 											aria-haspopup="true"
 											onClick={this.handleMenu}
-											color="inherit"
-									>
-										<Avatar
-												alt="Software Engineer"
-												src="https://png.icons8.com/ios/50/000000/source-code-filled.png"
-												className={classes.avatar}
-										/>
+											color="inherit">
+									<ContactMailIcon className={classes.icon} />
 									</IconButton>
 								</div>
 						</Toolbar>

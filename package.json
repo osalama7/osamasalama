@@ -17,6 +17,8 @@
     "react-tap-event-plugin": "^3.0.2"
   },
   "devDependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
     "babel-eslint": "^8.2.1",
     "chalk": "^2.3.1",
     "eslint": "^4.15.0",
@@ -24,12 +26,10 @@
     "gatsby": "^1.9.202",
     "gh-pages": "^1.1.0",
     "material-ui": "1.0.0",
-    "react":"^16.3.2",
     "prettier": "^1.10.2",
-    "react-dom": "latest",
     "prop-types": "latest",
-    "@material-ui/icons": "latest",
-    "@material-ui/core": "latest"
+    "react": "^16.3.2",
+    "react-dom": "latest"
   },
   "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
   "keywords": [

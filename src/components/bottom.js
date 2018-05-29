@@ -3,43 +3,51 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import Avatar from '@material-ui/core/Avatar';
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Grid from '@material-ui/core/Grid';
 const styles = {
 	root: {
-		width: 500,
-		layout: 'column'
+		margin: '5px',
+		paddingTop: '4em',
+		paddingBottom: '10px'
+
 	},
 };
 
 class ProfileBottomNavigation extends React.Component {
 	state = {
-		value: 0,
+		value: 1,
 	};
 
-	handleChange = (event, value) => {
-		this.setState({ value });
-	};
 
 	render() {
 		const { classes } = this.props;
-		const { value } = this.state;
-
 		return (
-				<div>
+				<div className={classes.root}>
 					<Grid container layout="column" spacing={16}>
 						<BottomNavigation
-								value={value}
-								onChange={this.handleChange}
 								showLabels
 								className={classes.root}
 						>
-							<BottomNavigationAction label="Github" icon={<RestoreIcon />} />
-							<BottomNavigationAction label="Stackoverflow" icon={<FavoriteIcon />} />
-							<BottomNavigationAction label="Twitter" icon={<LocationOnIcon />} />
-							<BottomNavigationAction label="LinkedIn" icon={<LocationOnIcon />} />
+							<BottomNavigationAction label="github"
+																			href={this.props.person.node.socialLinks.itemList[0].name}
+																				icon={<Avatar src={this.props.person.node.socialLinks.itemList[0].icon} />}
+																				/>
+							<BottomNavigationAction label="Twitter"
+																			href={this.props.person.node.socialLinks.itemList[1].name}
+																			icon={<Avatar src={this.props.person.node.socialLinks.itemList[1].icon} />}
+							/>
+							<BottomNavigationAction label="stackoverflow"
+																			href={this.props.person.node.socialLinks.itemList[2].name}
+																			icon={<Avatar src={this.props.person.node.socialLinks.itemList[2].icon} />}
+							/>
+							<BottomNavigationAction label="linkedIn"
+																			href={this.props.person.node.socialLinks.itemList[3].name}
+																			icon={<Avatar src={this.props.person.node.socialLinks.itemList[3].icon} />}
+							/>
 						</BottomNavigation>
 					</Grid>
 				</div>

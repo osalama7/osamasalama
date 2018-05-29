@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
+import LocationIcon from '@material-ui/icons/LocationOn';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -44,11 +44,7 @@ class ExperienceList extends React.Component {
 
 	render() {
 		const { classes } = this.props;
-		console.log('emplate');
-		console.log(this.props);
 
-		const message = `Truncation should be conditionally applicable on this long line of text
-                    as this is a much longer line than what the container can support. `;
 		const bull = <span className={classes.bullet}>•</span>;
 		return (
 				<div className={classes.root}>
@@ -59,7 +55,7 @@ class ExperienceList extends React.Component {
 						<Paper className={classes.paper}>
 							{this.props.person.education.itemList.map(data => {
 								return (
-									<Grid container wrap="column" spacing={16}>
+									<Grid container spacing={16}>
 										<Card className={classes.card}>
 											<CardContent>
 												<Typography>{data.name}</Typography>
@@ -72,8 +68,8 @@ class ExperienceList extends React.Component {
 							})}
 							{this.props.person.experience.itemList.map(data => {
 								return (
-										<Grid container wrap="column" spacing={16}>
-											<Grid container wrap="column" spacing={16}>
+										<Grid container spacing={16}>
+											<Grid container spacing={16}>
 												<Card className={classes.card}>
 													<CardContent>
 														<Typography>{data.name}</Typography>
@@ -89,7 +85,17 @@ class ExperienceList extends React.Component {
 								);
 							})}
 						</Paper>
+						<Grid container className={classes.root} spacing={16}>
+							<Grid item xs={12}>
+								<Grid container className={classes.demo} justify="center" spacing={classes.spacing}>
+									{[0, 1, 2].map(value => (
+											<Grid key={value} item>
 
+											</Grid>
+									))}
+								</Grid>
+							</Grid>
+						</Grid>
 					</div>
 				</div>
 		);

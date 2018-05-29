@@ -4,8 +4,10 @@ import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
 import Paper from '@material-ui/core/Paper';
+import Fade from '@material-ui/core/Fade';
+import Zoom from '@material-ui/core/Zoom';
 import TagFacesIcon from '@material-ui/icons/TagFaces';
-import Experience from './experience';
+// import Experience from './experience';
 
 const styles = theme => ({
 	root: {
@@ -13,9 +15,11 @@ const styles = theme => ({
 		justifyContent: 'center',
 		flexWrap: 'wrap',
 		padding: theme.spacing.unit / 2,
+		paddingBottom: '1em',
+		paddingTop: '2em',
 	},
 	chip: {
-		margin: theme.spacing.unit / 2,
+		margin: '5px',
 		avatar: {
 			padding: '1em'
 		}
@@ -29,30 +33,33 @@ class SkillsArray extends React.Component {
 
 	render() {
 		const { classes } = this.props;
-		console.log(this.props.person.node);
+		const transitionDuration = {
+			enter: 700,
+			exit: 300,
+		};
 		return (
-			<Paper>
-				<Experience person={this.props.person.node} />
-
-				<Paper className={classes.root} square={false}>
-
+				<Paper className={classes.root} square={false} elevation={0}>
 					{this.state.chipData.map(data => {
-
 						let index = null;
 						index = this.props.person.node.skills.itemList.indexOf(data);
 						return (
+							<Zoom
+									in={true}
+									timeout={transitionDuration}
+										style={{
+											transitionDelay: this.state.value === index ? transitionDuration.exit : 0,
+										}}
+										unmountOnExit>
 								<Chip
 										key={index}
 										avatar={<Avatar className={classes.chip.avatar} src={data.icon}/>}
 										label={data.name}
 										className={classes.chip}
 								/>
+							</Zoom>
 						);
-					})}
+					}, 1100)}
 				</Paper>
-			</Paper>
-
-
 		);
 	}
 }
@@ -89,13 +96,7 @@ export const pageQuery = graphql`
 						}
 					}
           title
-          image {
-            file {
-              url
-              fileName
-              contentType
-            }
-          }
+         
         }
       }
     }
