@@ -43,11 +43,14 @@ class Template extends React.Component {
     }
 
     return (
+
       <MuiThemeProvider theme={theme}>
 
         <Container className="index-container">
+
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
             <AppBar
                 title="Title"
             />
