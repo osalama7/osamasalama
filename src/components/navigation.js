@@ -57,9 +57,7 @@ function ProfileAppBar(props) {
 							</Typography>
 								<div>
 									<IconButton
-											aria-owns={open ? 'menu-appbar' : null}
 											aria-haspopup="true"
-											onClick={this.handleMenu}
 											color="inherit">
 									<ContactMailIcon className={classes.icon} />
 									</IconButton>
