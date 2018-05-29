@@ -1,7 +1,7 @@
 const contentfulConfig = require('./.contentful');
 
 module.exports = {
-  pathPrefix: '/gatsby-contentful-starter_osama-salama-profile',
+  pathPrefix: '/osamasalama',
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
