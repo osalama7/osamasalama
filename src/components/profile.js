@@ -36,6 +36,7 @@ class SkillsArray extends React.Component {
 			exit: 300,
 		};
 		return (
+			<div>
 				<Paper className={classes.root} square={false} elevation={0}>
 					{this.state.chipData.map(data => {
 						let index = null;
@@ -58,6 +59,7 @@ class SkillsArray extends React.Component {
 						);
 					}, 1100)}
 				</Paper>
+			</div>
 		);
 	}
 }

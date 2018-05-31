@@ -11,6 +11,14 @@ import Avatar from '@material-ui/core/Avatar';
 import classNames from 'classnames';
 import BottomNav from '../components/bottom';
 
+import Chip from '@material-ui/core/Chip';
+import Zoom from '@material-ui/core/Zoom';
+
+const transitionDuration = {
+	enter: 700,
+	exit: 300,
+};
+
 const styles = theme => ({
 	paper: {
 		padding: theme.spacing.unit * 2,
@@ -22,6 +30,12 @@ const styles = theme => ({
 		overflow: 'hidden',
 		padding: `0 ${theme.spacing.unit * 3}px`,
 		flexGrow: 1,
+	},
+	chip: {
+		margin: '5px',
+		avatar: {
+			padding: '1em'
+		}
 	},
 	wrapper: {
 		maxWidth: 400,
@@ -51,8 +65,10 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const [cv] = get(this, 'props.data.allContentfulPerson.edges');
+		let state = {
+			chipData: cv.node.skills.itemList
+		};
 		const { classes } = this.props;
-		console.log(cv);
       return (
 				<div>
 					<div className={classes.row}>
@@ -89,7 +105,30 @@ class RootIndex extends React.Component {
 							</Paper>
 						</div>
 					</div>
-					<Profile person={cv} />
+					<div>
+						<Paper className={classes.root} square={false} elevation={0}>
+							{cv.node.skills.itemList.map(data => {
+								let index = null;
+								index = cv.node.skills.itemList.indexOf(data);
+								return (
+										<Zoom
+												in={true}
+												timeout={transitionDuration}
+												style={{
+													transitionDelay: 0,
+												}}
+												unmountOnExit>
+											<Chip
+													key={index}
+													avatar={<Avatar className={classes.chip.avatar} src={data.icon}/>}
+													label={data.name}
+													className={classes.chip}
+											/>
+										</Zoom>
+								);
+							}, 1100)}
+						</Paper>
+					</div>
 					<div className={classes.row}>
 						<BottomNav person={cv} />
 					</div>
