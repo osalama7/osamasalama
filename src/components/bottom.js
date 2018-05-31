@@ -35,15 +35,15 @@ class ProfileBottomNavigation extends React.Component {
 																				/>
 							<BottomNavigationAction label="Twitter"
 																			href={this.props.person.node.socialLinks.itemList[1].name}
-																			icon={<Avatar src={this.props.person.node.socialLinks.itemList[1].icon} />}
+																			icon={<Avatar src={"//images.ctfassets.net/w3b3hu5yk7y7/35a4SzII1GimEymgyWOgme/861ebaa8c144b6c0240b844d6174b99a/icons8-twitter-50.png"} />}
 							/>
 							<BottomNavigationAction label="stackoverflow"
 																			href={this.props.person.node.socialLinks.itemList[2].name}
-																			icon={<Avatar src={this.props.person.node.socialLinks.itemList[2].icon} />}
+																			icon={<Avatar src={"//images.ctfassets.net/w3b3hu5yk7y7/2ROuGyg6L66yIyqS2YYqqQ/deac414eae686496f3a12481d292a5ec/icons8-stack-overflow-50.png"} />}
 							/>
 							<BottomNavigationAction label="linkedIn"
 																			href={this.props.person.node.socialLinks.itemList[3].name}
-																			icon={<Avatar src={this.props.person.node.socialLinks.itemList[3].icon} />}
+																			icon={<Avatar src={"//images.ctfassets.net/w3b3hu5yk7y7/35a4SzII1GimEymgyWOgme/30df543e69cb0660128e08ed16b5f91b/icons8-linkedin-filled-50.png"} />}
 							/>
 						</BottomNavigation>
 					</Grid>
