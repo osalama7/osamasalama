@@ -51,13 +51,14 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const [cv] = get(this, 'props.data.allContentfulPerson.edges');
+    console.log(cv);
 		const { classes } = this.props;
       return (
 				<div>
 					<div className={classes.row}>
 						<Avatar
 								alt="Osama Salama"
-								src="//images.ctfassets.net/w3b3hu5yk7y7/3oumRn3KyskQaWKiCa4YAk/02b263ec573e78b8e2971e67911be5b7/profile.png"
+								src="//images.ctfassets.net/w3b3hu5yk7y7/3oumRn3KyskQaWKiCa4YAk/1a1d6efd0028820388d4eb445dbbd6bb/O_Profile.png"
 								className={classNames(classes.avatar, classes.bigAvatar)}
 						/>
 					</div>
