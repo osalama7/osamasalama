@@ -2,7 +2,7 @@ import React from 'react';
 	import base from './base.css';
 import Container from '../components/container';
 import Navigation from '../components/navigation';
-
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 
@@ -43,20 +43,26 @@ class Template extends React.Component {
     }
 
     return (
-				<MuiThemeProvider theme={theme}>
-					<Container className="index-container">
+
+				<React.Fragment>
+					<CssBaseline />
+					<MuiThemeProvider theme={theme}>
+						<Container className="index-container">
 
 
 
-						<AppBar
-								title="Title"
-						/>
-						<Navigation />
-						{children()}
-					</Container>
-					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
-					<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-				</MuiThemeProvider>
+							<AppBar
+									title="Title"
+							/>
+							<Navigation />
+							{children()}
+						</Container>
+						<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
+						<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+					</MuiThemeProvider>
+					{/* The rest of your application */}
+				</React.Fragment>
+
 
     );
   }
