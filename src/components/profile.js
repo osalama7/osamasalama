@@ -67,36 +67,3 @@ SkillsArray.propTypes = {
 };
 
 export default withStyles(styles)(SkillsArray);
-
-export const pageQuery = graphql`
-  query ProfileQuery {
-    allContentfulPerson(filter: { id: { eq: "c15jwOBqpxqSAOy2eOO4S0m" } }) {
-      edges {
-        node {
-          name
-          yearsOfExperience
-          website
-          shortBio {
-            shortBio
-          }
-          skills {
-            itemList {
-              name
-              years
-              icon
-            }
-          }
-          education {
-						itemList {
-							name
-							yearTo
-							yearFrom
-						}
-					}
-          title
-         
-        }
-      }
-    }
-  }
-`

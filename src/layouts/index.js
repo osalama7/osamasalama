@@ -5,12 +5,7 @@ import Navigation from '../components/navigation';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-
-// Needed for onTouchTap
-// http://stackoverflow.com/a/34015469/988941
-// import injectTapEventPlugin from 'react-tap-event-plugin';
-// injectTapEventPlugin();
-// blueGrey900
+import getPageContext from '../get-page-context';
 
 const theme = createMuiTheme({
 	palette: {
@@ -34,6 +29,13 @@ const theme = createMuiTheme({
 
 
 class Template extends React.Component {
+	componentDidMount() {
+		// Remove the server-side injected CSS.
+		const jssStyles = document.querySelector('#server-side-jss');
+		if (jssStyles && jssStyles.parentNode) {
+			jssStyles.parentNode.removeChild(jssStyles);
+		}
+	};
   render() {
 
     const { location, children } = this.props;
@@ -41,9 +43,13 @@ class Template extends React.Component {
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
       rootPath = __PATH_PREFIX__ + `/`
     }
+		this.pageContext = getPageContext();
+
 
     return (
-			<MuiThemeProvider theme={theme}>
+			<MuiThemeProvider
+					theme={theme}
+					sheetsManager={this.pageContext.sheetsManager}>
 				<Container className="index-container">
 					<AppBar
 							title="Title"
