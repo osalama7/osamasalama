@@ -2,7 +2,7 @@ import React from 'react';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from 'material-ui/Paper';
+import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Profile from '../components/profile';

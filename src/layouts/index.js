@@ -13,23 +13,23 @@ import AppBar from '@material-ui/core/AppBar';
 // blueGrey900
 
 const theme = createMuiTheme({
-    palette: {
-				type: 'dark',
-				background: '#005958',
-        primary: {
-            light: '#89b5c6',
-            main: '#005958',
-            dark: '#002884',
-						text: '#89b5c6',
-            contrastText: '#fff',
-        },
-        secondary: {
-            light: '#ff7961',
-            main: '#89b5c6',
-            dark: '#ba000d',
-            contrastText: '#000',
-        },
-    },
+	palette: {
+		type: 'dark',
+		backgroundColor: '#005958',
+		primary: {
+			light: '#89b5c6',
+			main: '#005958',
+			dark: '#002884',
+			text: '#89b5c6',
+			contrastText: '#fff',
+		},
+		secondary: {
+			light: '#ff7961',
+			main: '#89b5c6',
+			dark: '#ba000d',
+			contrastText: '#000',
+		},
+	},
 });
 
 
@@ -43,27 +43,17 @@ class Template extends React.Component {
     }
 
     return (
-
-				<React.Fragment>
-					<CssBaseline />
-					<MuiThemeProvider theme={theme}>
-						<Container className="index-container">
-
-
-
-							<AppBar
-									title="Title"
-							/>
-							<Navigation />
-							{children()}
-						</Container>
-						<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
-						<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-					</MuiThemeProvider>
-					{/* The rest of your application */}
-				</React.Fragment>
-
-
+			<MuiThemeProvider theme={theme}>
+				<Container className="index-container">
+					<AppBar
+							title="Title"
+					/>
+					<Navigation />
+					{children()}
+				</Container>
+				<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
+				<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+			</MuiThemeProvider>
     );
   }
 }
