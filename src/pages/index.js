@@ -10,7 +10,7 @@ import LocationIcon from '@material-ui/icons/LocationOn';
 import Avatar from '@material-ui/core/Avatar';
 import classNames from 'classnames';
 import BottomNav from '../components/bottom';
-
+import Chip from '@material-ui/core/Chip';
 const styles = theme => ({
 	paper: {
 		padding: theme.spacing.unit * 2,
@@ -52,7 +52,6 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const [cv] = get(this, 'props.data.allContentfulPerson.edges');
 		const { classes } = this.props;
-		console.log(cv);
       return (
 				<div>
 					<div className={classes.row}>
@@ -62,6 +61,11 @@ class RootIndex extends React.Component {
 								className={classNames(classes.avatar, classes.bigAvatar)}
 						/>
 					</div>
+					<Chip
+							key={0}
+							label={'hello'}
+							className={classes.chip}
+					/>
 					<div className={classes.row}>
 						<div className={classes.wrapper}>
 							<Paper className={classes.paper} elevation={0}>
