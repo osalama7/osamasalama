@@ -14,13 +14,13 @@ import AppBar from '@material-ui/core/AppBar';
 
 const theme = createMuiTheme({
 	palette: {
-		type: 'dark',
-		backgroundColor: '#005958',
+		type: 'light',
+		backgroundColor: '#fffefd',
 		primary: {
 			light: '#89b5c6',
-			main: '#005958',
+			main: '#89b5c6',
 			dark: '#002884',
-			text: '#89b5c6',
+			text: '#001c29',
 			contrastText: '#fff',
 		},
 		secondary: {
