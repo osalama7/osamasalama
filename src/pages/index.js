@@ -65,6 +65,7 @@ class RootIndex extends React.Component {
 							key={0}
 							label={'hello'}
 							className={classes.chip}
+							avatar={<Avatar src="//images.ctfassets.net/w3b3hu5yk7y7/10keK4LITkY4egq4USeay4/e2816001f4c07c79f4fadc551db4116c/icons8-github-64.png" />}
 					/>
 					<div className={classes.row}>
 						<div className={classes.wrapper}>
@@ -113,6 +114,13 @@ export const pageQuery = graphql`
         node {
           name
           yearsOfExperience
+          gh {
+            file {
+              url
+              fileName
+              contentType
+            }
+          }
           website
           shortBio {
             shortBio
