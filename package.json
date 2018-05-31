@@ -45,6 +45,8 @@
     "url": "git+https://github.com/contentful-userland/gatsby-contentful-starter.git"
   },
   "scripts": {
+    "heroku-postbuild": "gatsby build",
+    "start": "serve public/",
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
