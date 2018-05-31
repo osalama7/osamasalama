@@ -4,10 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
 import Paper from '@material-ui/core/Paper';
-import Fade from '@material-ui/core/Fade';
 import Zoom from '@material-ui/core/Zoom';
-import TagFacesIcon from '@material-ui/icons/TagFaces';
-// import Experience from './experience';
+
 
 const styles = theme => ({
 	root: {

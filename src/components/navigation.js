@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 import Avatar from '@material-ui/core/Avatar';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-
+import Typography from '@material-ui/core/Typography';
 const styles = {
     root: {
         flexGrow: 5,

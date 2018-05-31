@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import LocationIcon from '@material-ui/icons/LocationOn';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
