@@ -15,11 +15,12 @@ html {
 body {
   margin: 0;
   padding: 0;
+  /*background-image: url("//images.ctfassets.net/w3b3hu5yk7y7/UZZIgeeIUe200se0c6qao/a78b3e24b59e56fe2905444c365488c0/Profile_Background.png");*/
 }
 
 img {
-  display: block;
   width: 100%;
+  height: auto;
 }
 
 h1,

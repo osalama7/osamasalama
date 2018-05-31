@@ -122,6 +122,13 @@ export const pageQuery = graphql`
               contentType
             }
           }
+          bgImg {
+            file {
+              url
+              fileName
+              contentType
+            }
+          }
           website
           shortBio {
             shortBio

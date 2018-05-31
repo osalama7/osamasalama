@@ -30,34 +30,18 @@ class SkillsArray extends React.Component {
 	};
 
 	render() {
-		const { classes } = this.props;
 		const transitionDuration = {
 			enter: 700,
 			exit: 300,
 		};
+		const { classes } = this.props;
 		return (
-				<Paper className={classes.root} square={false} elevation={0}>
-					{this.state.chipData.map(data => {
-						let index = null;
-						index = this.props.person.node.skills.itemList.indexOf(data);
-						return (
-							<Zoom
-									in={true}
-									timeout={transitionDuration}
-										style={{
-											transitionDelay: this.state.value === index ? transitionDuration.exit : 0,
-										}}
-										unmountOnExit>
-								<Chip
-										key={index}
-										avatar={<Avatar className={classes.chip.avatar} src="//images.ctfassets.net/w3b3hu5yk7y7/10keK4LITkY4egq4USeay4/e2816001f4c07c79f4fadc551db4116c/icons8-github-64.png"/>}
-										label={data.name}
-										className={classes.chip}
-								/>
-							</Zoom>
-						);
-					}, 1100)}
-				</Paper>
+			<Chip
+					key={0}
+					avatar={<Avatar className={classes.chip.avatar} src="//images.ctfassets.net/w3b3hu5yk7y7/10keK4LITkY4egq4USeay4/e2816001f4c07c79f4fadc551db4116c/icons8-github-64.png"/>}
+					label={this.props.person.node.skills.itemList[0].name}
+					className={classes.chip}
+			/>
 		);
 	}
 }
