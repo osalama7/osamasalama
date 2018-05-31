@@ -50,7 +50,7 @@ class SkillsArray extends React.Component {
 										unmountOnExit>
 								<Chip
 										key={index}
-										avatar={<Avatar className={classes.chip.avatar} src={data.icon}/>}
+										avatar={<Avatar className={classes.chip.avatar} src="//images.ctfassets.net/w3b3hu5yk7y7/10keK4LITkY4egq4USeay4/e2816001f4c07c79f4fadc551db4116c/icons8-github-64.png"/>}
 										label={data.name}
 										className={classes.chip}
 								/>
