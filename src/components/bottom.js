@@ -31,7 +31,7 @@ class ProfileBottomNavigation extends React.Component {
 						>
 							<BottomNavigationAction label="github"
 																			href={this.props.person.node.socialLinks.itemList[0].name}
-																				icon={<Avatar src={this.props.person.node.socialLinks.itemList[0].icon} />}
+																				icon={<Avatar src={"//images.ctfassets.net/w3b3hu5yk7y7/10keK4LITkY4egq4USeay4/e2816001f4c07c79f4fadc551db4116c/icons8-github-64.png"} />}
 																				/>
 							<BottomNavigationAction label="Twitter"
 																			href={this.props.person.node.socialLinks.itemList[1].name}
