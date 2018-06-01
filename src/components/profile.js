@@ -17,6 +17,8 @@ const styles = theme => ({
 		alignItems: 'center',
 		flexWrap: 'wrap',
 		flexGrow: 1,
+		padding: '0.5em',
+		margin: '0.5em',
 	},
 
 	chip: {
