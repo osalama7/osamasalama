@@ -18,6 +18,7 @@ module.exports = {
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
+		'gatsby-plugin-robots-txt',
 		'gatsby-plugin-jss',
 		'gatsby-plugin-sass',
 		{
@@ -25,6 +26,9 @@ module.exports = {
 			options: {
 				trackingId: config.googleAnalytics.trackingId
 			}
+		},
+		{
+			resolve: `gatsby-plugin-sitemap`
 		},
     {
       resolve: 'gatsby-source-contentful',
