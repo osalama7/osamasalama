@@ -17,6 +17,7 @@
     "gatsby-transformer-remark": "^1.7.32",
     "inquirer": "^5.1.0",
     "lodash": "^4.17.4",
+    "mdi-material-ui": "^5.1.0",
     "react-tap-event-plugin": "^3.0.2"
   },
   "devDependencies": {

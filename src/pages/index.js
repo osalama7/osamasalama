@@ -62,12 +62,6 @@ class RootIndex extends React.Component {
 								className={classNames(classes.avatar, classes.bigAvatar)}
 						/>
 					</div>
-					<Chip
-							key={0}
-							label={'hello'}
-							className={classes.chip}
-							avatar={<Avatar src="//images.ctfassets.net/w3b3hu5yk7y7/10keK4LITkY4egq4USeay4/e2816001f4c07c79f4fadc551db4116c/icons8-github-64.png" />}
-					/>
 					<div className={classes.row}>
 						<div className={classes.wrapper}>
 							<Paper className={classes.paper} elevation={0}>
