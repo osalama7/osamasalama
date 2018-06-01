@@ -1,11 +1,8 @@
 {
-  "name": "gatsby-contentful-starter",
+  "name": "Osama Salama web profile",
   "description": "Starter Contentful Gatsby Blog",
   "version": "1.0.0",
-  "author": "Stefan Judis <stefanjudis@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
-  },
+  "author": "Osama Salama <osama.m7@gmail.com>",
   "dependencies": {
     "contentful-import": "^6.2.0",
     "gatsby-link": "^1.6.34",
