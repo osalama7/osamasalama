@@ -1,6 +1,6 @@
 {
   "name": "Osama Salama web profile",
-  "description": "Starter Contentful Gatsby Blog",
+  "description": "Gatsby MaterialUI Contentful Graphql Netlify static profile",
   "version": "1.0.0",
   "author": "Osama Salama <osama.m7@gmail.com>",
   "dependencies": {
@@ -43,7 +43,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/contentful-userland/gatsby-contentful-starter.git"
+    "url": "https://github.com/osalama7/osamasalama.git"
   },
   "scripts": {
     "heroku-postbuild": "gatsby build",
