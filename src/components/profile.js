@@ -13,10 +13,10 @@ const styles = theme => ({
 	root: {
 		display: 'flex',
 		justifyContent: 'center',
+		direction: 'row',
+		alignItems: 'center',
 		flexWrap: 'wrap',
-		paddingLeft: '10em',
-		paddingRight: '10em',
-		margin: '5px',
+		flexGrow: 1,
 	},
 
 	chip: {
@@ -44,66 +44,90 @@ class SkillsArray extends React.Component {
 		return (
 			<div className={classes.root}>
 				<Grid container layout="column" spacing={16}>
-					<Chip
-							avatar={<Ninja />}
-							label={'Ninja'}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<LanguageJavascript />}
-							label={this.props.person.node.skills.itemList[0].name}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<Nodejs />}
-							label={this.props.person.node.skills.itemList[1].name}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<Npm />}
-							label={this.props.person.node.skills.itemList[5].name}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<Angular />}
-							label={this.props.person.node.skills.itemList[8].name}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<Docker />}
-							label={this.props.person.node.skills.itemList[18].name}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<LanguageHtml5 />}
-							label={'HTML'}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<LanguageCpp />}
-							label={'C++'}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<LanguagePhp />}
-							label={'PHP'}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<Database />}
-							label={'Databases'}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<Console />}
-							label={'Bash'}
-							className={classes.chip}
-					/>
-					<Chip
-							avatar={<ReactIcon />}
-							label={'React'}
-							className={classes.chip}
-					/>
+					<Grid item xs>
+						<Chip
+								avatar={<Ninja />}
+								label={'Ninja'}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<LanguageJavascript />}
+								label={this.props.person.node.skills.itemList[0].name}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<Nodejs />}
+								label={this.props.person.node.skills.itemList[1].name}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<Npm />}
+								label={this.props.person.node.skills.itemList[5].name}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<Angular />}
+								label={this.props.person.node.skills.itemList[8].name}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<Docker />}
+								label={this.props.person.node.skills.itemList[18].name}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<LanguageHtml5 />}
+								label={'HTML'}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<LanguageCpp />}
+								label={'C++'}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<LanguagePhp />}
+								label={'PHP'}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<Database />}
+								label={'Databases'}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<Console />}
+								label={'Bash'}
+								className={classes.chip}
+						/>
+					</Grid>
+					<Grid item xs>
+						<Chip
+								avatar={<ReactIcon />}
+								label={'React'}
+								className={classes.chip}
+						/>
+					</Grid>
 				</Grid>
 			</div>
 		);
