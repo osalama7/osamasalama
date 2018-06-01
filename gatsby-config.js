@@ -12,24 +12,26 @@ const contentfulConfig = {
 
 module.exports = {
   pathPrefix: '/osamasalama',
+	siteMetadata: {
+		siteUrl: 'www.osamasalama.xyz',
+		rssMetadata: {
+			site_url: 'www.osamasalama.xyz',
+			title: 'Osama Salama Profile',
+			description: 'let\'s talk ?',
+			author: 'Osama Salama',
+			copyright: 'copywrite add here',
+		}
+	},
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
 		'gatsby-plugin-jss',
 		'gatsby-plugin-sass',
 		{
-			resolve: 'gatsby-plugin-google-analytics',
+			resolve: "gatsby-plugin-google-analytics",
 			options: {
-				trackingId: "UA-120007367-1",
-				// Puts tracking script in the head instead of the body
-				head: false,
-				// Setting this parameter is optional
-				anonymize: true,
-				// Setting this parameter is also optional
-				respectDNT: true,
-				// Avoids sending pageview hits from custom paths
-				exclude: [""],
-			},
+				trackingId: "UA-120215217-1"
+			}
 		},
     {
       resolve: 'gatsby-source-contentful',
