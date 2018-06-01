@@ -26,9 +26,6 @@ module.exports = {
 				trackingId: config.googleAnalytics.trackingId
 			}
 		},
-		{
-			resolve: 'gatsby-plugin-sitemap'
-		},
     {
       resolve: 'gatsby-source-contentful',
       options: process.env.NODE_ENV === 'development' ?
