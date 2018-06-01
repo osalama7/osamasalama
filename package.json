@@ -39,7 +39,10 @@
   "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
   "keywords": [
     "gatsby",
-    "contentful"
+    "contentful",
+    "graphql",
+    "netlify",
+    "material-ui"
   ],
   "license": "MIT",
   "main": "n/a",

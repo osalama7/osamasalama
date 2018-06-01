@@ -18,7 +18,6 @@ module.exports = {
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
-		'gatsby-plugin-robots-txt',
 		'gatsby-plugin-jss',
 		'gatsby-plugin-sass',
 		{
