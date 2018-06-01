@@ -48,13 +48,6 @@ class SkillsArray extends React.Component {
 				<Grid container layout="column" spacing={16}>
 					<Grid item xs>
 						<Chip
-								avatar={<Ninja />}
-								label={'Ninja'}
-								className={classes.chip}
-						/>
-					</Grid>
-					<Grid item xs>
-						<Chip
 								avatar={<LanguageJavascript />}
 								label={this.props.person.node.skills.itemList[0].name}
 								className={classes.chip}
