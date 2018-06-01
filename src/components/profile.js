@@ -41,7 +41,7 @@ class SkillsArray extends React.Component {
 			enter: 700,
 			exit: 300,
 		};
-		console.log(this.props.person.node.skills.itemList);
+
 		const { classes } = this.props;
 		return (
 			<div className={classes.root}>

@@ -49,9 +49,8 @@ const styles = theme => ({
 class RootIndex extends React.Component {
 
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const [cv] = get(this, 'props.data.allContentfulPerson.edges');
-    console.log(cv);
+
 		const { classes } = this.props;
       return (
 				<div>
@@ -67,14 +66,14 @@ class RootIndex extends React.Component {
 							<Paper className={classes.paper} elevation={0}>
 								<Grid container wrap="nowrap" spacing={8}>
 									<Grid item xs zeroMinWidth>
-										<Typography variant="headline" color="secondary">
+										<Typography variant="headline" color="primary">
 											{cv.node.name}
 										</Typography>
-										<Typography variant="body2" color="secondary">
+										<Typography variant="body2" color="primary">
 											{cv.node.title}
 										</Typography>
 										<Grid item>
-											<Typography variant="body2" color="secondary">
+											<Typography variant="body2" color="primary">
 												{cv.node.shortBio.shortBio}
 											</Typography>
 										</Grid>

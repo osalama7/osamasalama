@@ -7,12 +7,14 @@ import IconButton from '@material-ui/core/IconButton';
 import Avatar from '@material-ui/core/Avatar';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import Typography from '@material-ui/core/Typography';
+import Config from '../../config.json';
+
 const styles = {
     root: {
         flexGrow: 5,
 				alignItems: 'stretch',
 				padding: '0px',
-				margin: '0px'
+				margin: '0px',
     },
     flex: {
         flex: 1,
@@ -39,12 +41,10 @@ function ProfileAppBar(props) {
     const { classes } = props;
     return (
         <div className={classes.root}>
-					<AppBar position="static">
+					<AppBar position="static" color={'secondary'}>
 						<Toolbar>
 							<IconButton className={classes.menuButton}
 													color="inherit"
-													aria-label="Menu"
-													href="mailto:osama.salama@tutanota.de"
 							>
 								<Avatar
 								alt="Software Engineer"
@@ -56,8 +56,11 @@ function ProfileAppBar(props) {
 							</Typography>
 								<div>
 									<IconButton
+											aria-label="contact me"
+											href={Config.siteMetadata.email}
 											aria-haspopup="true"
-											color="inherit">
+											color="primary"
+									>
 									<ContactMailIcon className={classes.icon} />
 									</IconButton>
 								</div>
