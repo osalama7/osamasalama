@@ -10,7 +10,9 @@ import LocationIcon from '@material-ui/icons/LocationOn';
 import Avatar from '@material-ui/core/Avatar';
 import classNames from 'classnames';
 import BottomNav from '../components/bottom';
-import Chip from '@material-ui/core/Chip';
+import Fade from '@material-ui/core/Fade';
+
+
 const styles = theme => ({
 	paper: {
 		padding: theme.spacing.unit * 2,
@@ -55,11 +57,13 @@ class RootIndex extends React.Component {
       return (
 				<div>
 					<div className={classes.row}>
-						<Avatar
-								alt="Osama Salama"
-								src="//images.ctfassets.net/w3b3hu5yk7y7/3oumRn3KyskQaWKiCa4YAk/1a1d6efd0028820388d4eb445dbbd6bb/O_Profile.png"
-								className={classNames(classes.avatar, classes.bigAvatar)}
-						/>
+						<Fade timeout={1200} in={true}>
+							<Avatar
+									alt="Osama Salama"
+									src="//images.ctfassets.net/w3b3hu5yk7y7/3oumRn3KyskQaWKiCa4YAk/1a1d6efd0028820388d4eb445dbbd6bb/O_Profile.png"
+									className={classNames(classes.avatar, classes.bigAvatar)}
+							/>
+						</Fade>
 					</div>
 					<div className={classes.row}>
 						<div className={classes.wrapper}>
