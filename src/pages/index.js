@@ -57,7 +57,7 @@ class RootIndex extends React.Component {
       return (
 				<div>
 					<div className={classes.row}>
-						<Fade timeout={900} in={true}>
+						<Fade timeout={500} in={true}>
 							<Avatar
 									alt="Osama Salama"
 									src="//images.ctfassets.net/w3b3hu5yk7y7/3oumRn3KyskQaWKiCa4YAk/1a1d6efd0028820388d4eb445dbbd6bb/O_Profile.png"

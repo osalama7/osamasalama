@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+
 import Grow from '@material-ui/core/Grow';
 import ReactIcon from 'mdi-material-ui/React';
 import { Nodejs, LanguageJavascript, Docker, Angular, LanguageHtml5, LanguagePhp, LanguageCpp, Ninja, Database, Npm, Console } from 'mdi-material-ui/';
@@ -22,7 +21,7 @@ const styles = theme => ({
 	},
 
 	chip: {
-		margin: '5px',
+		border: '0.5em',
 		avatar: {
 			padding: '1em'
 		}
@@ -37,15 +36,10 @@ class SkillsArray extends React.Component {
 	};
 
 	render() {
-		const transitionDuration = {
-			enter: 700,
-			exit: 300,
-		};
-
 		const { classes } = this.props;
 		return (
 			<div className={classes.root}>
-				<Grow in={true} timeout={900}>
+				<Grow in={true} timeout={500}>
 					<Grid container layout="column" spacing={16}>
 						<Grid item xs>
 							<Chip
