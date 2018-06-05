@@ -70,7 +70,7 @@ class RootIndex extends React.Component {
 							<Paper className={classes.paper} elevation={0}>
 								<Grid container wrap="nowrap" spacing={8}>
 									<Grid item xs zeroMinWidth>
-										<Typography variant="headline" color="primary">
+										<Typography color="primary">
 											<h1>
 												{cv.node.name}
 											</h1>
