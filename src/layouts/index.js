@@ -51,11 +51,11 @@ class Template extends React.Component {
 			<MuiThemeProvider
 					theme={theme}
 					sheetsManager={this.pageContext.sheetsManager}>
-				<Helmet defaultTitle={`Osama Salama Software engineer Web profile Nodejs`} titleTemplate={`%s | Osama Salama`}>
+				<Helmet defaultTitle={`Osama Salama, Software engineer`} titleTemplate={`%s | Osama Salama`}>
 					<meta name="twitter:site" content="@osama_salama" />
 					<meta name="og:type" content="website" />
 					<meta name="og:site_name" content="Osama Salama" />
-					<meta name="description" content="Software engineer web profile" />
+					<meta name="description" content="Osama Salama. Full-time Software engineer, data engineer, passionate tinkerer, supporter/learner. Don't hesitate to contact me" />
 					<link
 							rel="canonical"
 							href={`https://www.osamasalama.xyz/`}
