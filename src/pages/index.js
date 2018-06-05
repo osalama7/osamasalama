@@ -71,7 +71,9 @@ class RootIndex extends React.Component {
 								<Grid container wrap="nowrap" spacing={8}>
 									<Grid item xs zeroMinWidth>
 										<Typography variant="headline" color="primary">
-											{cv.node.name}
+											<h1>
+												{cv.node.name}
+											</h1>
 										</Typography>
 										<Typography variant="body2" color="primary">
 											{cv.node.title}
