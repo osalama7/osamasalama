@@ -39,7 +39,7 @@ class SkillsArray extends React.Component {
 		const { classes } = this.props;
 		return (
 			<div className={classes.root}>
-				<Grow in={true} timeout={500}>
+				<Grow in={true} timeout={100}>
 					<Grid container layout="column" spacing={16}>
 						<Grid item xs>
 							<Chip
