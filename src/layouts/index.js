@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import getPageContext from '../get-page-context';
-
+import Helmet from 'react-helmet';
 const theme = createMuiTheme({
 	palette: {
 		type: 'light',
@@ -47,9 +47,20 @@ class Template extends React.Component {
 
 
     return (
+
 			<MuiThemeProvider
 					theme={theme}
 					sheetsManager={this.pageContext.sheetsManager}>
+				<Helmet defaultTitle={`Osama Salama`} titleTemplate={`%s | Osama Salama`}>
+					<meta name="twitter:site" content="@osama_salama" />
+					<meta name="og:type" content="website" />
+					<meta name="og:site_name" content="Osama Salama" />
+					<link
+							rel="canonical"
+							href={`https://www.osamasalama.xyz/`}
+					/>
+					<html lang="en" />
+				</Helmet>
 				<Container className="index-container">
 					<AppBar
 							title="Title"
