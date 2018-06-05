@@ -5,6 +5,7 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import Grid from '@material-ui/core/Grid';
 import { GithubCircle, LinkedinBox, TwitterBox, StackOverflow } from 'mdi-material-ui/';
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const styles = {
 	root: {
@@ -30,22 +31,30 @@ class ProfileBottomNavigation extends React.Component {
 								showLabels
 								className={classes.root}
 						>
-							<BottomNavigationAction label="github"
-																			href={this.props.person.node.socialLinks.itemList[0].name}
-																			icon={<GithubCircle />}
-																				/>
-							<BottomNavigationAction label="Twitter"
-																			href={this.props.person.node.socialLinks.itemList[1].name}
-																			icon={<TwitterBox />}
-							/>
-							<BottomNavigationAction label="stackoverflow"
-																			href={this.props.person.node.socialLinks.itemList[2].name}
-																			icon={<StackOverflow />}
-							/>
-							<BottomNavigationAction label="linkedIn"
-																			href={this.props.person.node.socialLinks.itemList[3].name}
-																			icon={<LinkedinBox />}
-							/>
+							<OutboundLink>
+								<BottomNavigationAction label="github"
+																				href={this.props.person.node.socialLinks.itemList[0].name}
+																				icon={<GithubCircle />}
+																					/>
+							</OutboundLink>
+							<OutboundLink>
+								<BottomNavigationAction label="Twitter"
+																				href={this.props.person.node.socialLinks.itemList[1].name}
+																				icon={<TwitterBox />}
+								/>
+							</OutboundLink>
+							<OutboundLink>
+								<BottomNavigationAction label="stackoverflow"
+																				href={this.props.person.node.socialLinks.itemList[2].name}
+																				icon={<StackOverflow />}
+								/>
+							</OutboundLink>
+							<OutboundLink>
+								<BottomNavigationAction label="linkedIn"
+																				href={this.props.person.node.socialLinks.itemList[3].name}
+																				icon={<LinkedinBox />}
+								/>
+							</OutboundLink>
 						</BottomNavigation>
 					</Grid>
 				</div>
