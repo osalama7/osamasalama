@@ -68,20 +68,17 @@ class RootIndex extends React.Component {
 					<div className={classes.row}>
 						<div className={classes.wrapper}>
 							<Paper className={classes.paper} elevation={0}>
-								<Grid container wrap="nowrap" spacing={8}>
+								<Grid container wrap="nowrap" spacing={16}>
 									<Grid item xs zeroMinWidth>
-										<Typography variant={'headline'} color="primary">
+										<Typography variant="title" color="primary">
 												{cv.node.name}
 										</Typography>
-										<Typography variant="body2" color="primary">
-											{cv.node.title}
-										</Typography>
-										<Grid item>
+										<Grid item xs={12}>
 											<Typography variant="body2" color="primary">
 												{cv.node.shortBio.shortBio}
 											</Typography>
 										</Grid>
-										<Grid item>
+										<Grid itemxs={12}>
 											<LocationIcon className={classes.icon} />
 										</Grid>
 										<Typography variant="body2" color="secondary">

@@ -55,12 +55,17 @@ function ProfileAppBar(props) {
 							<Typography variant="title" color="inherit" className={classes.flex}>
 							</Typography>
 								<div>
+
 									<IconButton
 											aria-label="contact me"
 											href={Config.siteMetadata.email}
 											aria-haspopup="true"
 											color="primary"
 									>
+										{/*TODO fix aligning contact message*/}
+									{/*<Typography variant="body2" color="inherit" className={classes.flex}>*/}
+										{/*Contact*/}
+									{/*</Typography>*/}
 									<ContactMailIcon className={classes.icon} />
 									</IconButton>
 								</div>
